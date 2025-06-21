@@ -6,7 +6,7 @@ import { MainPage } from './main-page/main-page';
   selector: 'app-root',
   imports: [RouterOutlet, MainPage],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected title = 'ToDo';
