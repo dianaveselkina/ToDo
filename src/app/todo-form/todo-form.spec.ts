@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPage } from './main-page';
+import { TodoForm } from './todo-form';
 
-describe('MainPage', () => {
-  let component: MainPage;
-  let fixture: ComponentFixture<MainPage>;
+describe('TodoForm', () => {
+  let component: TodoForm;
+  let fixture: ComponentFixture<TodoForm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainPage]
+      imports: [TodoForm]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainPage);
+    fixture = TestBed.createComponent(TodoForm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
