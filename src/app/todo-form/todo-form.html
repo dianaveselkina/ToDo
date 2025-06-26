@@ -1,1 +1,20 @@
-<p>todo-form works!</p>
+<h2>Добавить задачу</h2>
+<form #taskForm="ngForm" (ngSubmit)="saveTask()">
+  <input
+    name="title"
+    [(ngModel)]="title"
+    placeholder="Название задачи"
+    required
+  />
+  <textarea
+    name="description"
+    [(ngModel)]="description"
+    placeholder="Описание"
+  ></textarea>
+  <label>
+    <input type="checkbox" [checked]="false" disabled /> Выполнена
+  </label>
+  <app-button label="Добавить задачу" (click)="goToAddTask()"
+    >Добавить задачу</app-button
+  >
+</form>

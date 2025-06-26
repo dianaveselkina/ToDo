@@ -1,3 +1,19 @@
+<h2>Список задач</h2>
 <ul>
-  <li *ngFor="let todo of todos">{{ todo.title }} {{todo.description}}</li>
+  <li *ngFor="let task of tasks; let i = index">
+    <span [ngClass]="{ 'done': task.completed }">{{ task.title }}</span>
+    <p>{{ task.description }}</p>
+    <input
+      type="checkbox"
+      [checked]="task.completed"
+      (change)="toggleTaskStatus(i)"
+    />
+    <app-button label="Подробнее" [routerLink]="['/tasks', i]"></app-button>
+    <app-button label="Удалить" (click)="deleteTask(i)"></app-button>
+  </li>
 </ul>
+<app-button
+  label="Добавить задачу"
+  class="add"
+  (click)="goToAddTask()"
+></app-button>

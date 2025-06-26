@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 
 export interface Task {
   title: string;
-  deccription: string;
+  description: string;
   completed: boolean;
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class TaskServis {
+export class TaskService {
   private tasks: Task[] = [];
 
   getTasks() {
@@ -17,5 +17,8 @@ export class TaskServis {
   }
   addTask(task: Task) {
     this.tasks.push(task);
+  }
+  updateTasks(tasks: Task[]) {
+    this.tasks = [...tasks];
   }
 }
