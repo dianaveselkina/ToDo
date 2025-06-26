@@ -1,0 +1,24 @@
+.form {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(242, 245, 244);
+  position: relative;
+  width: 60rem;
+  height: 30rem;
+  padding: 10px;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+textarea {
+  width: 30rem;
+  height: 10rem;
+}

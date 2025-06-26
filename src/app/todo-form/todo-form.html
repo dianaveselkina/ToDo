@@ -1,23 +1,26 @@
-<h2>Добавить задачу</h2>
-<form #taskForm="ngForm" (ngSubmit)="saveTask(taskForm)">
-  <input
-    name="title"
-    [(ngModel)]="title"
-    placeholder="Название задачи"
-    required
-    #titleInput="ngModel"
-  />
-  <div *ngIf="showTitleError">
-    <small style="color: red">Название обязательно</small>
-  </div>
-  <textarea
-    name="description"
-    [(ngModel)]="description"
-    placeholder="Описание"
-  ></textarea>
-  <label>
-    <input type="checkbox" [checked]="false" disabled /> Выполнена
-  </label>
-
-  <app-button type="submit" label="Добавить задачу"></app-button>
-</form>
+<div class="form">
+  <h2>Добавить задачу</h2>
+  <form #taskForm="ngForm" (ngSubmit)="saveTask(taskForm)">
+    <div class="form__item">
+      <input
+        name="title"
+        [(ngModel)]="title"
+        placeholder="Название задачи"
+        required
+        #titleInput="ngModel"
+      />
+      <div *ngIf="showTitleError">
+        <small style="color: red">Название обязательно</small>
+      </div>
+      <textarea
+        name="description"
+        [(ngModel)]="description"
+        placeholder="Описание"
+      ></textarea>
+      <label>
+        <input type="checkbox" [checked]="false" disabled /> Выполнена
+      </label>
+    </div>
+    <app-button type="submit" label="Добавить задачу"></app-button>
+  </form>
+</div>
