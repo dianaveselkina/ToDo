@@ -43,4 +43,7 @@ export class TodoForm {
   goToAddTask() {
     this.router.navigate(['/add-task']);
   }
+  goBack() {
+    this.router.navigate(['/']);
+  }
 }

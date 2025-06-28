@@ -1,5 +1,5 @@
-<div *ngIf="task">
+<div class="detail" *ngIf="task">
   <h2>{{task.title}}</h2>
-  <p>{{task.description}}</p>
+  <p class="detail__text">{{task.description}}</p>
   <app-button class="back" label="Назад" (click)="goBack()"></app-button>
 </div>

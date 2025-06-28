@@ -10,7 +10,9 @@
   <div class="list__items">
     <ul>
       <li class="list__item" *ngFor="let task of tasks; let i = index">
-        <span [ngClass]="{ 'done': task.completed }">{{ task.title }}</span>
+        <span [ngClass]="{ 'done': task.completed }"
+          ><strong>{{ task.title }}</strong></span
+        >
         <div class="description">
           <p>{{ task.description }}</p>
         </div>
