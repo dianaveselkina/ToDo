@@ -1,6 +1,7 @@
 <div class="list">
   <div class="header">
     <h2 class="list__title">Список задач</h2>
+    <app-serch (searchTextChange)="searchText = $event"></app-serch>
     <app-button
       label="Добавить задачу"
       class="add"
@@ -9,7 +10,10 @@
   </div>
   <div class="list__items">
     <ul>
-      <li class="list__item" *ngFor="let task of tasks; let i = index">
+      <li
+        class="list__item"
+        *ngFor="let task of tasks| filter: searchText; let i = index"
+      >
         <span [ngClass]="{ 'done': task.completed }"
           ><strong>{{ task.title }}</strong></span
         >
